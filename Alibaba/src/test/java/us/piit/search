@@ -1,0 +1,31 @@
+
+    //  @Test
+    public void clickOnBabyoice () throws InterruptedException {
+        WebElement dropdown = driver.findElement(By.id("searchDropdownBox"));
+        Select select = new Select(dropdown);
+        select.selectByVisibleText("Books");
+        Thread.sleep(3000);
+    }
+
+    //  @Test
+    public void getDropdownOptions () throws InterruptedException {
+        List<WebElement> dropdownList = driver.findElements(By.id("searchDropdownBox"));
+        for (WebElement element : dropdownList)
+            if (element.getText().equals("Alexa skill"))
+                element.click();
+        System.out.println("clicked!!!");
+        Thread.sleep(5000);
+
+    }
+}
+    //  @Test
+  //  public void clickOnBabyoice () throws InterruptedException {
+   //     WebElement dropdown = driver.findElement(By.id("searchDropdownBox"));
+   //     Select select = new Select(dropdown);
+   //     List<WebElement> list = select.getOptions();
+   //     for (WebElement element : list) {
+    //        if (element.getText().equals("Books")) {
+     //           element.click();
+    //            System.out.println("clicked!!!");
+
+
